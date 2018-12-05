@@ -18,6 +18,19 @@ public class Sort {
     }
   }
 
+  public static String toString(int[] data) {
+   int size = data.length;
+   String result = "[";
+   for(int i = 0; i <size ; i++) {
+     if(i==0) {result += data[0];}
+     if(i!=0) {result += " " + data[i];}
+     if( i != size - 1) {
+       result += ",";
+     }
+   }
+   return result + "]";
+ }
+
   public static void main(String[] args) {
     int[] data = new int[] {15,3,67,13};
     System.out.println(data);
