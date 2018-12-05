@@ -19,7 +19,15 @@ public class Sort {
   }
 
   public stati void selectionSort(int[] ary) {
-    
+    int index = ary.length - 1;
+    for(int i = 0; i <= index; i++ ) {
+      int min = ary[i];
+      for(int j = i; j <= index; j++) {
+        if(ary[j] < min) {
+          min = ary[j];
+        }
+      }
+    }
   }
 
   public static String toString(int[] data) {
