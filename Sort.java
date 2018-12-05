@@ -32,8 +32,9 @@ public class Sort {
  }
 
   public static void main(String[] args) {
-    int[] data = new int[] {15,3,67,13};
-    System.out.println(data);
+    int[] data = new int[] {15,3,67,13,4,25,12};
+    selectionsort(data);
+    System.out.println(toString(data));
   }
 
 }
