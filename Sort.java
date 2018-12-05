@@ -18,6 +18,10 @@ public class Sort {
     }
   }
 
+  public stati void selectionSort(int[] ary) {
+    
+  }
+
   public static String toString(int[] data) {
    int size = data.length;
    String result = "[";
