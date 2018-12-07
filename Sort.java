@@ -37,7 +37,14 @@ public class Sort {
   }
 
   public static void bubbleSort(int[] ary) {
-    
+    for(int i = 0; i < ary.length - 1; i++) {
+      int num1 = ary[i];
+      int num2 = ary[i+1];
+      if(ary[i] > ary[i+1]) {
+        ary[i] = num2;
+        ary[i+1] = num1;
+      }
+    }
   }
 
   public static String toString(int[] data) {
