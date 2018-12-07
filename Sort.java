@@ -37,6 +37,7 @@ public class Sort {
   }
 
   public static void bubbleSort(int[] ary) {
+    for(int j = 0; j < ary.length; j++) {
     for(int i = 0; i < ary.length - 1; i++) {
       int num1 = ary[i];
       int num2 = ary[i+1];
@@ -46,6 +47,7 @@ public class Sort {
       }
     }
   }
+}
 
   public static String toString(int[] data) {
    int size = data.length;
@@ -62,9 +64,8 @@ public class Sort {
 
   public static void main(String[] args) {
     int[] data = new int[] {15,3,67,13,4,25,12};
-    int[] data2 = new int[] {15,-3,67,13,4,25,12,45,2,34,12,68,49,32,89,90,99,97,95,92,121,120,118,104,109};
+    int[] data2 = new int[] {15,-3,67,13,4,25,12,45,2,34,12,68,49,32,89,90,-982,99,97,95,92,121,120,118,104,109};
     selectionsort(data);
-    bubbleSort(data2);
     bubbleSort(data2);
     System.out.println(toString(data));
     System.out.println(toString(data2));
