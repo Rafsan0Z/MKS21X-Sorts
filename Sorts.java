@@ -51,7 +51,24 @@ public class Sorts {
 }
 
   public static void insertionSort(int[] ary) {
-
+    int currentmax = 0;
+    int place = 0;
+    for(int i = 0; i < ary.length; i++) {
+      int current = ary[i];
+      place = i;
+      if(ary[i] >= max) {max = ary[i];}
+      else{
+        for(int j = i - 1; j >= 0; j--) {
+          if(ary[j] > current) {place--;}
+        }
+        for(int k = i - 1; k >= pos; k--) {
+          if(k != pos) {ary[k] = ary[k-1];}
+          else{
+            ary[pos] = current;
+          }
+        }
+      }
+    }
   }
 
   public static String toString(int[] data) {
