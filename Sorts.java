@@ -51,24 +51,7 @@ public class Sorts {
 }
 
   public static void insertionSort(int[] ary) {
-    int currentmax = 0;
-    int place = 0;
-    for(int i = 0; i < ary.length; i++) {
-      int current = ary[i];
-      place = i;
-      if(ary[i] >= max) {max = ary[i];}
-      else{
-        for(int j = i - 1; j >= 0; j--) {
-          if(ary[j] > current) {place--;}
-        }
-        for(int k = i - 1; k >= pos; k--) {
-          if(k != pos) {ary[k] = ary[k-1];}
-          else{
-            ary[pos] = current;
-          }
-        }
-      }
-    }
+    
   }
 
   public static String toString(int[] data) {
@@ -92,12 +75,12 @@ public class Sorts {
     }
     int[] data = new int[] {15,3,67,13,4,25,12};
     int[] data2 = new int[] {542,45,78,987,15,-3,67,13,4,-827,25,12,45,2,34,12,68,41,5,89,209,9,32,89,90,-982,99,97,95,92,121,120,118,104,109};
-    selectionsort(data);
+    insertionSort(data);
     bubbleSort(data2);
     bubbleSort(data3);
     System.out.println(toString(data));
     System.out.println(toString(data2));
-    System.out.println(toString(data3));
+  //  System.out.println(toString(data3));
   }
 
 }
