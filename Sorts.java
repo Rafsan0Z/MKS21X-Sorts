@@ -77,18 +77,26 @@ public class Sorts {
 
   public static void main(String[] args) {
     Random randgen = new Random();
-    int[] data3 = new int[100];
-    for(int i = 0; i < 100; i++) {
-      data3[i] = randgen.nextInt() % 3;
+    int len = 100000;
+    int[] data3 = new int[len];
+    for(int i = 0; i < len; i++) {
+      data3[i] = 0;
     }
     int[] data = new int[] {15,3,67,13,4,25,12};
     int[] data2 = new int[] {542,45,78,987,15,-3,67,13,4,-827,25,12,45,2,34,12,68,41,5,89,209,9,32,89,90,-982,99,97,95,92,121,120,118,104,109};
-    insertionSort(data);
-    insertionSort(data2);
+  //  insertionSort(data);
+  //  insertionSort(data2);
     bubbleSort(data3);
-    System.out.println(toString(data));
-    System.out.println(toString(data2));
-  //  System.out.println(toString(data3));
+//    System.out.println(toString(data));
+//    System.out.println(toString(data2));
+    boolean result = true;
+    for(int i = 0; i < len; i++) {
+      if(data3[i] != 0) {
+        result = false;
+        break;
+      }
+    }
+    System.out.println(result);
   }
 
 }
