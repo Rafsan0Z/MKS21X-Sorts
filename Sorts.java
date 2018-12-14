@@ -5,17 +5,16 @@ public class Sorts {
     int index = ary.length - 1;
     for(int i = 0; i <= index; i++ ) {
       int min = ary[i];
-      int num = 0;
-      int place = 0;
+      int place = i;
       for(int j = i + 1; j <= index; j++) {
         if(ary[j] < min) {
           min = ary[j];
           place = j;
-          num = ary[i];
         }
       }
-      ary[i] = min;
-      ary[place] = num;
+      int shift = min;
+      ary[place] = ary[i];
+      ary[i] = shift;
     }
   }
 
@@ -67,8 +66,8 @@ public class Sorts {
     int[] data = new int[] {15,3,67,13,4,25,12};
     int[] data2 = new int[] {542,45,78,987,15,-3,67,13,4,-827,25,12,45,2,34,12,68,41,5,89,209,9,32,89,90,-982,99,97,95,92,121,120,118,104,109};
   //  insertionSort(data);
-  //  insertionSort(data2);
-    bubbleSort(data3);
+    selectionSort(data2);
+//    bubbleSort(data3);
 //    System.out.println(toString(data));
 //    System.out.println(toString(data2));
     boolean result = true;
@@ -78,7 +77,7 @@ public class Sorts {
         break;
       }
     }
-    System.out.println(result);
+    System.out.println(toString(data2));
   }
 
 }
